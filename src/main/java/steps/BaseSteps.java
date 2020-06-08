@@ -40,6 +40,7 @@ public class BaseSteps {
 						System.setProperty(properties.getProperty("driverChrome"), properties.getProperty("pathToDriverChromeLin"));
 						options = new ChromeOptions();
 						options.addArguments("start-maximized");
+						options.addArguments("--no-sandbox");
 						options.setPageLoadStrategy(PageLoadStrategy.EAGER);
 						driver = new ChromeDriver(options);
 						break;
