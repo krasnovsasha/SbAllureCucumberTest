@@ -31,10 +31,16 @@ pipeline{
     agent any
     stages{
         stage('Print first string'){
-            sh. 'String one'
+            steps{
+                sh 'String one'
+            }
+
         }
         stage('Print second string'){
-            sh. 'String two'
+            steps{
+                sh 'String two'
+            }
+
         }
     }
 
