@@ -32,7 +32,7 @@ pipeline{
     stages{
         stage('Print first string'){
             steps{
-                sh 'String one'
+                sh 'mvn --version'
             }
 
         }
