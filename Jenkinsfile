@@ -29,10 +29,13 @@
 //}
 pipeline{
     agent any
-    stage('Print first string'){
-        sh 'String one'
+    stages{
+        stage('Print first string'){
+            sh 'String one'
+        }
+        stage('Print second string'){
+            sh 'String two'
+        }
     }
-    stage('Print second string'){
-        sh 'String two'
-    }
+
 }
