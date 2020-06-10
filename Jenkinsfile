@@ -38,7 +38,7 @@ pipeline{
         }
         stage('Print second string'){
             steps{
-                sh 'String two'
+                sh echo "'String two'"
             }
 
         }

@@ -11,10 +11,6 @@ public class MainPage extends BasePage {
 	@FindBy(xpath = "//a[contains(text(),'Ипотека на готовое жильё')]")
 	private WebElement mortgageRealEstateLink;
 
-	public MainPage() {
-		PageFactory.initElements(BaseSteps.getDriver(),this);
-	}
-
 	public WebElement getMortgageLink() {
 		return mortgageLink;
 	}

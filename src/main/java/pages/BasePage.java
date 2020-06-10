@@ -4,10 +4,15 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import steps.BaseSteps;
 
 abstract class BasePage {
+	public BasePage() {
+		PageFactory.initElements(BaseSteps.getDriver(), this);
+	}
+
 	public void clickElement(WebElement element) {
 		BaseSteps.wait.until(ExpectedConditions.elementToBeClickable(element)).click();
 	}
@@ -46,8 +51,8 @@ abstract class BasePage {
 			element.sendKeys(Keys.BACK_SPACE);
 		}
 	}
-	public void goOutOfFrame(){
+
+	public void goOutOfFrame() {
 		BaseSteps.getDriver().switchTo().defaultContent();
 	}
-
 }

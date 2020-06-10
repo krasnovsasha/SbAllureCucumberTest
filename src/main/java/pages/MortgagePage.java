@@ -49,10 +49,6 @@ public class MortgagePage extends BasePage {
 		return salaryCheckBox;
 	}
 
-	public MortgagePage() {
-		PageFactory.initElements(BaseSteps.getDriver(), this);
-	}
-
 	public WebElement getIframe() {
 		return iframe;
 	}
